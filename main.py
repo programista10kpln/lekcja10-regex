@@ -42,7 +42,7 @@ if re.match('^[A-Z]$', 'H'):
 else:
     print('nie dopasowano')
 
-if re.match(r'^(.+)(@)(.+)(\.)(.+){2,}$', 'user@o2.pl'):
+if re.match(r'^([^\.]+)(@)([^\.]+)(\.)([^\.]{2,})$', 'user@o2.pl'):
     print('dobry e-mail')
 else:
     print('to nie e-mail')
