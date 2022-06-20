@@ -67,4 +67,46 @@ def funkcja(arg1, arg2='World', *args, **kwargs):
 # jedna gwiazdka to nieskonczona ilosc argumentow, a dwie gwiazdki wymagja takze etykiety, bo to tworzy słownik
 
 print((funkcja('Hi', 'Poland')))
-print((funkcja('Hi', 'Poland', ':)', ':D', dzien='Poniedziałek')))
+print((funkcja('Hi', 'Poland', ':)', ':D', dzien='Poniedziałek', rok='2022')))
+
+print('\n')  # rozpakowanie krotki
+
+a, b = (2, 5)
+print(a)
+print(b)
+
+x = 7
+y = 20
+x, y = y, x
+print(f'x: {x}')
+print(f'y: {y}')
+
+start, *wszystko, koniec, koniec2 = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+print(start)
+print(wszystko)
+print(koniec)
+print(koniec2)
+
+# gwiazdka bierze te nieprzypisane
+
+print('\n')  # skrócony if
+
+print('prawda') if 5 > 2 else print('nieprawda')
+
+a = 'parzysta' if 5 % 2 == 0 else 'nieparzysta'
+print(a)
+
+for i in range(1, 10):
+    if i > 5:
+        print(i)
+        continue
+else: # dziala po koncu petli, nie liczac break
+    print('koniec')
+try:
+    a = 5/0
+except ZeroDivisionError:
+    print('nie dzielimy przez 0')
+else: # dziala gdy nie ma bledu
+    print('koniec')
+finally:
+    print('zawsze bede na ekranie ;)')
