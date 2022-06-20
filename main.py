@@ -56,3 +56,15 @@ if wynik:
     print(wynik.groups())
 else:
     print('nie dopasowano')
+
+print('\n')  # argumenty funkcji - lista parametrów (krotka)
+
+
+def funkcja(arg1, arg2='World', *args, **kwargs):
+    return arg1, arg2, args, kwargs
+
+
+# jedna gwiazdka to nieskonczona ilosc argumentow, a dwie gwiazdki wymagja takze etykiety, bo to tworzy słownik
+
+print((funkcja('Hi', 'Poland')))
+print((funkcja('Hi', 'Poland', ':)', ':D', dzien='Poniedziałek')))
